@@ -30,6 +30,11 @@ const addFieldGoalAway = event => {
   awaySetValue(awayValue + 3);
 
 };
+const reset = event => {
+  awaySetValue(0);
+  setValue(0);
+
+};
 
   return (
     <div className="container">
@@ -56,10 +61,17 @@ const addFieldGoalAway = event => {
           <button onClick = {addTouchdown} className="homeButtons__touchdown">Home Touchdown</button>
           <button onClick = {addFieldGoal} className="homeButtons__fieldGoal">Home Field Goal</button>
         </div>
+        <div>
+
+        <button onClick = {reset} className="awayButtons__fieldGoal">Reset Score</button>
+
+
+        </div>
         <div className="awayButtons">
           <button onClick = {addTouchdownAway} className="awayButtons__touchdown">Away Touchdown</button>
           <button onClick = {addFieldGoalAway} className="awayButtons__fieldGoal">Away Field Goal</button>
         </div>
+
       </section>
     </div>
   );
